@@ -1,0 +1,13 @@
+import 'dart:io';
+
+void main() async {
+  final sourceFile = File('hello.txt');
+  final destinationFile = File('hello_copy.txt');
+
+  if (await sourceFile.exists()) {
+    await sourceFile.copy(destinationFile.path);
+    print('File copied to hello_copy.txt');
+  } else {
+    print('Source file hello.txt does not exist.');
+  }
+}
