@@ -1,0 +1,23 @@
+import 'dart:io';
+
+void main() async {
+  final file = File('students.csv');
+
+  
+  List<List<String>> students = [
+    ['Name', 'Age', 'Address'],
+    ['Adity', '21', 'Lamabazar'],
+    ['Ema', '22', 'Shibganj'],
+    ['Muntaha', '22', 'Pathantula']
+  ];
+
+  
+  String csvData = students.map((row) => row.join(',')).join('\n');
+  await file.writeAsString(csvData);
+  print('Student data written to students.csv');
+
+  
+  print('\nReading students.csv:');
+  String contents = await file.readAsString();
+  print(contents);
+}
