@@ -1,0 +1,21 @@
+void main() {
+  
+  List<String> friends = [
+    'Adity',
+    'Sakshar',
+    'Achintyo',
+    'Niru',
+    'Keya',
+    'Antu',
+    'Fahim'
+  ];
+
+  
+  Iterable<String> namesStartingWithA = friends.where((name) => name.startsWith('A'));
+
+  
+  print('Friends with names starting with "A":');
+  for (var name in namesStartingWithA) {
+    print(name);
+  }
+}
