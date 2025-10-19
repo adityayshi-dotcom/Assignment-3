@@ -1,0 +1,11 @@
+import 'dart:io';
+
+void main() async {
+  final file = File('hello.txt');
+  String friendName = 'Niru';  
+
+  
+  await file.writeAsString('$friendName\n', mode: FileMode.append);
+
+  print('Friend\'s name appended to hello.txt');
+}
