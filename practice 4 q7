@@ -1,0 +1,18 @@
+void main() {
+  
+  Map<String, String> contactInfo = {
+    'name': 'Adity',
+    'phone': '01315602556',
+    'city': 'Sylhet',
+    'code': 'SYL3100'
+  };
+
+  
+  Iterable<String> keysWithLength4 = contactInfo.keys.where((key) => key.length == 4);
+
+  // Print the matching keys
+  print('Keys with length 4:');
+  for (var key in keysWithLength4) {
+    print(key);
+  }
+}
